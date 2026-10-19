@@ -2,7 +2,7 @@
    CONFIGURACIÓN Y DATOS PERSONALIZABLES
    ========================================================================== */
 const CONFIG = {
-  NOMBRE_REMITENTE: "Tu Nombre Aquí",
+  NOMBRE_REMITENTE: "Jesus",
 
   LIBRO: {
     TITULO: "El Principito",
