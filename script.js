@@ -2,14 +2,7 @@
    CONFIGURACIÓN Y DATOS PERSONALIZABLES
    ========================================================================== */
 const CONFIG = {
-  NOMBRE_REMITENTE: "Jesus",
-
-  LIBRO: {
-    TITULO: "El Principito",
-    AUTOR: "Antoine de Saint-Exupéry",
-    DISPONIBLE: false,
-    URL_DESCARGA: "assets/libro.pdf"
-  }
+  NOMBRE_REMITENTE: "Jesus"
 };
 
 /* ==========================================================================
@@ -24,25 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function personalizarContenido() {
   document.getElementById("signature-name").textContent = CONFIG.NOMBRE_REMITENTE;
-  document.getElementById("book-title").textContent = CONFIG.LIBRO.TITULO;
-  document.getElementById("book-author").textContent = `por ${CONFIG.LIBRO.AUTOR}`;
-
-  const downloadArea = document.getElementById("book-download-area");
-  
-  if (CONFIG.LIBRO.DISPONIBLE && CONFIG.LIBRO.URL_DESCARGA) {
-    downloadArea.innerHTML = `
-      <a href="${CONFIG.LIBRO.URL_DESCARGA}" class="btn-secondary" target="_blank" download>
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Descargar lectura
-      </a>
-    `;
-  } else {
-    downloadArea.innerHTML = `
-      <div class="notice-box">
-        <p>Este detalle está apartado para cuando tengamos la versión digital lista. Mientras tanto, tu lugar en esta lectura ya está guardado.</p>
-      </div>
-    `;
-  }
 }
 
 /* ==========================================================================
